@@ -85,3 +85,19 @@ const b1 = Buffer.allocUnsafe(100);
 const b2 = Buffer.allocUnsafe(100);
 
 console.log(b1.buffer === b2.buffer); // true — same slab
+
+# 📦 Subarray in Buffers
+
+Buffers in Node.js are like arrays, but instead of storing general values, they store raw binary data — **bytes**. 
+
+Just like how arrays can be sliced using `.slice()`, Buffers can be sliced using `.subarray()` or `.slice()`. But there's a unique twist!
+
+---
+
+## 🧠 Understanding Subarray in Buffers
+
+When you create a subarray from a buffer, you're essentially **slicing the buffer** — very similar to how you'd slice an array:
+
+```js
+const buffer = Buffer.from('Hello, world!');
+const sliced = buffer.subarray(0, 5);
