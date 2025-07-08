@@ -76,6 +76,18 @@ Node.js Buffers are backed by a **V8 external memory store**, not the garbage-co
 
 ---
 
+
+
+## 🧠 Understanding Subarray in Buffers
+
+When you create a subarray from a buffer, you're essentially **slicing the buffer** — very similar to how you'd slice an array:
+
+```js
+const buffer = Buffer.from('Hello, world!');
+const sliced = buffer.subarray(0, 5);
+```
+
+
 ## 🧪 Confirmation Examples
 
 ```js
@@ -92,12 +104,3 @@ Buffers in Node.js are like arrays, but instead of storing general values, they 
 
 Just like how arrays can be sliced using `.slice()`, Buffers can be sliced using `.subarray()` or `.slice()`. But there's a unique twist!
 
----
-
-## 🧠 Understanding Subarray in Buffers
-
-When you create a subarray from a buffer, you're essentially **slicing the buffer** — very similar to how you'd slice an array:
-
-```js
-const buffer = Buffer.from('Hello, world!');
-const sliced = buffer.subarray(0, 5);
